@@ -3,14 +3,15 @@
 const Q = require('@nmq/q/server');
 Q.start();
 
+// Files
+const files = new Q('files');
+files.monitorEvent('save');
+files.monitorEvent('error');
+
+// Database
 const db = new Q('database');
 db.monitorEvent('create');
 db.monitorEvent('read');
 db.monitorEvent('update');
 db.monitorEvent('delete');
-
-const network = new Q('network');
-network.monitorEvent('connect');
-network.monitorEvent('attack');
-network.monitorEvent('no-service');
-
+db.monitorEvent('error');

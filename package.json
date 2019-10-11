@@ -1,11 +1,10 @@
 {
-  "name": "events-lab",
-  "version": "1.0.0",
-  "description": "Events Lab",
-  "main": "app/app.js",
+  "name": "lab-19-message-queue-server-and-logger",
+  "version": "0.0.1",
+  "description": "message queue server and logger",
+  "main": "server.js",
   "scripts": {
-    "test": "jest --verbose --coverage",
-    "start": "node ."
+    "lint": "eslint '**/*.js'"
   },
   "dependencies": {
     "@nmq/q": "^1.0.5",
